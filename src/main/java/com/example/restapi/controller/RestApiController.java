@@ -27,4 +27,10 @@ public class RestApiController {
 
         return msg;
     }
+
+    @GetMapping(path = "/sol/{count}")
+    public Integer sol(@PathVariable(name = "count") Integer cnt){
+        System.out.println("sol count : " + cnt);
+        return cnt;
+    }
 }
